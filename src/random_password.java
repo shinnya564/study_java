@@ -1,8 +1,16 @@
 
 public class random_password {
-	public static void main(String[] args) {
-		String pass = "ABCDEFGH";
+	String password;
 
+	random_password(){
+		this.password = "TEST" ;
+	}
+	random_password(String pass){
+		this.password = pass;
+	}
+
+	public static String create_password() {
+		String pass = "ABCDEFGH";
 		while(true) {
 			int rnd = (int)(Math.random() * 10);
 			if(rnd == 9) {
@@ -20,7 +28,6 @@ public class random_password {
 		}else if("def".indexOf(pass) >= 0){
 			pass = "define";
 		}
-		System.out.println(pass);
-		System.out.println(pass.length());
+		return pass;
 	}
 }
